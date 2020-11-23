@@ -1,0 +1,64 @@
+<div class="container">
+
+    {{!-- header --}}
+    <header class="row m-4">
+        <div class="col-md-12 text-center">
+            <img src="/assets/img/burger.png" alt="burger" style="height: 100px;" />
+            <h1> Eat-Da-Burger! </h1>
+        </div>
+    </header>
+
+    {{!-- input field --}}
+    <div class="row">
+        <div class="col-md-6 input-group mb-3 " style="margin: auto;">
+            <input type="text" class="form-control beige devoured" placeholder="Enter a burger you would like to eat"
+                aria-label="burger" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary brown-button" type="button" id="add-burger">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+    {{!-- to be devoured --}}
+        <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item beige">
+                        <h4>Cras justo odio
+                            <button type="button" class="btn btn-secondary gray-button">Devour it!</button>
+                        </h4>
+                    </li>
+                    <li class="list-group-item beige">
+                        <h4>Dapibus ac facilisis in
+                            <button type="button" class="btn btn-secondary gray-button">Devour it!</button>
+                        </h4>
+                    </li>
+                    <li class="list-group-item beige">
+                        <h4>Vestibulum at eros
+                            <button type="button" class="btn btn-secondary gray-button">Devour it!</button>
+                        </h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    {{!-- devoured --}}
+        <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item beige">
+                        <h4 class="devoured">Cras justo odio</h4>
+                    </li>
+                    <li class="list-group-item beige">
+                        <h4 class="devoured">Dapibus ac facilisis in</h4>
+                    </li>
+                    <li class="list-group-item beige">
+                        <h4 class="devoured">Vestibulum at eros</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

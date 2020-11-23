@@ -1,0 +1,45 @@
+body {
+    background-color:#51a667;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    color: #555555  !important;
+}
+
+h1 {
+    font-size: 55px;
+    font-weight: 900;
+    color: #413523;
+}
+
+h4 {
+    color: #413523;
+}
+
+.brown-button {
+    float: right;
+    display: inline;
+    background-color: #413523 !important;
+    color: beige !important;
+}
+
+.brown-button:hover {
+    background-color: #666666 !important;
+}
+
+.gray-button {
+    float: right;
+    display: inline;
+    background-color: #666666 !important;
+    color: beige !important;
+}
+
+.gray-button:hover {
+    background-color: #413523 !important;
+}
+
+.beige {
+    background-color: beige !important;
+}
+
+.devoured {
+    color: #999 !important;
+}
