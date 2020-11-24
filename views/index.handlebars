@@ -9,18 +9,19 @@
     </header>
 
     {{!-- input field --}}
-    <div class="row">
+    <div class="row m-4">
         <div class="col-md-6 input-group mb-3 " style="margin: auto;">
             <input type="text" class="form-control beige devoured" placeholder="Enter a burger you would like to eat"
-                aria-label="burger" aria-describedby="button-addon2">
+                value="">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary brown-button" type="button" id="add-burger">Submit</button>
+                <button class="btn btn-outline-secondary brown-button" type="submit" id="add-burger">Submit</button>
+                // add action:url and method:POST ?????  need a FORM wrapper?
             </div>
         </div>
     </div>
 
     <div class="row">
-    {{!-- to be devoured --}}
+        {{!-- to be devoured --}}
         <div class="col-md-6">
             <div class="card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
@@ -43,7 +44,7 @@
             </div>
         </div>
 
-    {{!-- devoured --}}
+        {{!-- devoured --}}
         <div class="col-md-6">
             <div class="card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
