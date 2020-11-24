@@ -38,57 +38,57 @@ const orm = {
     },
 
     // why only 'value' in parameter?
-    create: function (table, column, value, cb) {
-        let queryString = "INSERT INTO " + table;
-        queryString += " (";
-        queryString += column.toString();
-        queryString += ") ";
-        queryString += "VALUES (";
-        queryString += printQuestionMarks(value.length);
-        queryString += ") ";
+    // create: function (table, column, value, cb) {
+    //     let queryString = "INSERT INTO " + table;
+    //     queryString += " (";
+    //     queryString += column.toString();
+    //     queryString += ") ";
+    //     queryString += "VALUES (";
+    //     queryString += printQuestionMarks(value.length);
+    //     queryString += ") ";
 
-        console.log("INSIDE CREATE: ", queryString);
+    //     console.log("INSIDE CREATE: ", queryString);
 
-        connection.query(queryString, value, function (err, result) {
-            if (err) {
-                throw err;
-            }
+    //     connection.query(queryString, value, function (err, result) {
+    //         if (err) {
+    //             throw err;
+    //         }
 
-            cb(result);
-        });
-    },
+    //         cb(result);
+    //     });
+    // },
 
-    // An example of objColVal would be {name: panther, sleepy: true}
-    // look into what condiition is calling
-    update: function (table, colValObject, condition, cb) {
-        let queryString = "UPDATE " + table;
-        queryString += " SET ";
-        queryString += objToSql(colValObject);
-        queryString += " WHERE ";
-        queryString += condition;
+    // // An example of objColVal would be {name: panther, sleepy: true}
+    // // look into what condiition is calling
+    // update: function (table, colValObject, condition, cb) {
+    //     let queryString = "UPDATE " + table;
+    //     queryString += " SET ";
+    //     queryString += objToSql(colValObject);
+    //     queryString += " WHERE ";
+    //     queryString += condition;
 
-        console.log("INSIDE UPDATE: ", queryString);
+    //     console.log("INSIDE UPDATE: ", queryString);
 
-        connection.query(queryString, function (err, result) {
-            if (err) {
-                throw err;
-            }
-            cb(result);
-        });
-    },
+    //     connection.query(queryString, function (err, result) {
+    //         if (err) {
+    //             throw err;
+    //         }
+    //         cb(result);
+    //     });
+    // },
 
-    delete: function (table, condition, cb) {
-        let queryString = "DELETE FROM " + table;
-        queryString += " WHERE ";
-        queryString += condition;
+    // delete: function (table, condition, cb) {
+    //     let queryString = "DELETE FROM " + table;
+    //     queryString += " WHERE ";
+    //     queryString += condition;
 
-        connection.query(queryString, function (err, result) {
-            if (err) {
-                throw err;
-            }
-            cb(result);
-        });
-    }
+    //     connection.query(queryString, function (err, result) {
+    //         if (err) {
+    //             throw err;
+    //         }
+    //         cb(result);
+    //     });
+    // }
 }
 
 module.exports = orm;

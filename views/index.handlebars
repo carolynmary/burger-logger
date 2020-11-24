@@ -1,6 +1,6 @@
 <div class="container">
 
-    {{!-- header --}}
+    {{!-- HEADER --}}
     <header class="row m-4">
         <div class="col-md-12 text-center">
             <img src="/assets/img/burger.png" alt="burger" style="height: 100px;" />
@@ -10,7 +10,7 @@
 
     {{!-- input field ============== do I need to change anything to FORM? // add btn action:url and method:POST ????? --}}
     <div class="row m-4">
-        <div class="col-md-6 input-group mb-3 " style="margin: auto;">
+        <div class="col-md-6 input-group mb-3" style="margin: auto;">
             <input type="text" class="form-control beige devoured" placeholder="Enter a burger you would like to eat"
                 value="">
             <div class="input-group-append">
@@ -19,16 +19,17 @@
         </div>
     </div>
 
+    {{!-- MAIN --}}
     <main class="row">
 
         {{!-- to be devoured --}}
         <div class="col-md-6">
-            <h5>AVAILABLE BURGERS</h5>
+            <h2>Burgers</h2>
             <div class="card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
-                    {{#each burgers}}
+                    {{#each burgersObj}}
                         {{#unless devoured}}
-                            {{> availBurgers devour=false}}
+                            {{> availBurgers}}
                         {{/unless}}
                     {{/each}}
                 </ul>
@@ -37,13 +38,13 @@
 
         {{!-- devoured --}}
         <div class="col-md-6">
-            <h5>SORRY, ALL GONE!</h5>
+            <h2>Sorry, all gone!</h2>
             <div class="card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
-                    {{#each burgers}}
-                        {{#unless devoured}}
-                            {{> devouredBurgers devour=true}}
-                        {{/unless}}
+                    {{#each burgersObj}}
+                        {{#if devoured}}
+                            {{> devouredBurgers}}
+                        {{/if}}
                     {{/each}}
                 </ul>
             </div>
