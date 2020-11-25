@@ -1,6 +1,6 @@
 body {
     background-color:#51a667;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Big Shoulders Stencil Display', sans-serif;
     color: #555555  !important;
 }
 
@@ -16,8 +16,10 @@ h2 {
     font-weight: 400;
 }
 
-h4 {
+.devour-form {
+    font-size: 25px;
     color: #41382f;
+    display: inline;
 }
 
 .brown-button {

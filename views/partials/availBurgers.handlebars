@@ -1,12 +1,7 @@
-{{!-- <button class="change-sleep" data-id="{{id}}" 
-              data-newsleep="{{sleep}}">
-        </button> --}}
-
-<li class="list-group-item beige">
-    <h4>{{burger_name}}
-        <button type="button" class="btn btn-secondary gray-button" 
-                id="devour-btn" data-id="{{id}}">
-            Devour it!
-        </button>
-    </h4>
+<li class="list-group-item beige devour">
+    <form class="devour-form form-inline button-size">
+        {{burger_name}}
+        <input type="hidden" class="burger-id" value={{id}}>
+        <button type="submit" class="btn btn-default gray-button">Devour it!</button>
+    </form>
 </li>

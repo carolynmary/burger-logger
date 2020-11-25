@@ -1,6 +1,6 @@
 <div class="container">
 
-    {{!-- HEADER --}}
+    {{!-- header --}}
     <header class="row m-4">
         <div class="col-md-12 text-center">
             <img src="/assets/img/burger.png" alt="burger" style="height: 100px;" />
@@ -9,24 +9,21 @@
     </header>
 
     {{!-- input field --}}
-    <div class="row m-4">
+    <aside class="row m-4">
         <form class="col-md-6 input-group mb-3" style="margin: auto;" action="/api/burger" method="POST">
-            <input type="text" class="form-control beige devoured" value="" name="burger_name"
+            <input type="text" class="form-control beige" value="" name="burger_name"
                 placeholder="Enter a burger you would like to eat">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary brown-button" type="submit" id="add-btn">
-                    Submit
-                </button>
+                <button class="btn btn-outline-secondary brown-button" type="submit">Submit</button>
             </div>
         </form>
-    </div>
+    </aside>
 
-    {{!-- MAIN --}}
     <main class="row">
 
         {{!-- to be devoured --}}
         <div class="col-md-6">
-            <h2>Burgers</h2>
+            <h2>Burger List</h2>
             <div class="card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
                     {{#each burgersObj}}

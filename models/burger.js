@@ -1,13 +1,12 @@
 const orm = require("../config/orm");
 
 const burger = {
-
     all: function (cb) {
-        orm.all("burgers", function (res) {
-            cb(res);
-        });
+        orm.all(
+            "burgers",
+            cb
+        );
     },
-
     create: function (burgerName, cb) {
         orm.create(
             "burgers",
@@ -16,23 +15,21 @@ const burger = {
             cb
         );
     },
-
-    update: function (colValObject, condition, cb) {
+    update: function (devouredBurgerId, cb) {
         orm.update(
             "burgers",
-            colValObject,
-            condition,
+            { devoured: true },
+            ["id=" + devouredBurgerId],
             cb
         );
     },
-
-    delete: function (condition, cb) {
-        orm.delete(
-            "burgers",
-            condition,
-            cb
-        );
-    }
-}
+    // delete: function (condition, cb) {
+    //     orm.delete(
+    //         "burgers",
+    //         condition,
+    //         cb
+    //     );
+    // }
+};
 
 module.exports = burger;
