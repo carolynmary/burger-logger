@@ -16,7 +16,7 @@
   
 ## How to Use 
 
-![demo](pathToFileHere)
+![demo](./public/assets/img/demo.gif)
 
 ## License
     
