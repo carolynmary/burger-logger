@@ -10,9 +10,8 @@
 
     {{!-- input field --}}
     <aside class="row m-4">
-        <form class="col-md-6 input-group mb-3" style="margin: auto;" action="/api/burger" method="POST">
-            <input type="text" class="form-control beige" value="" name="burger_name"
-                placeholder="Enter a burger you would like to eat">
+        <form class="col-md-6 input-group add-burger" action="/api/burger" method="POST">
+            <input type="text" class="form-control beige" value="" name="burger_name" placeholder="Enter a burger you would like to eat">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary brown-button" type="submit">Submit</button>
             </div>
@@ -24,7 +23,7 @@
         {{!-- to be devoured --}}
         <div class="col-md-6">
             <h2>Burger List</h2>
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 22rem; margin: auto; margin-bottom: 20px;">
                 <ul class="list-group list-group-flush">
                     {{#each burgersObj}}
                         {{#unless devoured}}
@@ -38,7 +37,7 @@
         {{!-- devoured --}}
         <div class="col-md-6">
             <h2>Sorry, all gone!</h2>
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 22rem; margin: auto; margin-bottom: 20px;">
                 <ul class="list-group list-group-flush">
                     {{#each burgersObj}}
                         {{#if devoured}}

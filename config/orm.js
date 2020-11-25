@@ -34,7 +34,6 @@ const orm = {
             cb(result);
         });
     },
-    // why only 'value' in parameter? ============================================================================
     create: function (table, column, value, cb) {
         let queryString = "INSERT INTO " + table;
         queryString += " (";

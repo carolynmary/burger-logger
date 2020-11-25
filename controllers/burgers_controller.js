@@ -15,7 +15,7 @@ router.post("/api/burger", function (req, res) {
         return false
     }
     else {
-        burger.create(req.body.burger_name, function (result) {
+        burger.create(newBurger, function (result) {
             res.redirect("/")
         })
     };
@@ -25,7 +25,6 @@ router.post("/api/burger", function (req, res) {
 router.put("/api/burger/:id", function (req, res) {
     const devouredBurgerId = req.params.id;
     burger.update(devouredBurgerId, function (result) {
-        // console.log(result);
         res.status(200).end();
     });
 });

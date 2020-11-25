@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // DEVOUR IT
-    $(".devour-form").on("submit", function (event) {
+    $(".burger-list").on("submit", function (event) {
         event.preventDefault();
         const burgerId = $(this).children(".burger-id").val();
         $.ajax({
