@@ -5,31 +5,25 @@ const burger = require("../models/burger");
 router.get("/", function (req, res) {
     burger.all(data => {
         // console.log("GET ROUTE DATA: ", data);
-        res.render("index", {burgersObj: data});
+        res.render("index", { burgersObj: data });
     });
 });
 
+// HOW TO PREVENT A POST IF NULL?
 // add burger to database
-// router.post("/api/burger", function (req, res) {
-//     console.log("ADD REQ.BODY: ", req.body);
-//     burger.create([
-//         "name",   // ======== check if this is right
-//         "devoured"
-//     ], [
-//         req.body.name,  // ======== check if this is right syntax
-//         req.body.devoured  // ======== check if this is right
-//     ],
-//         function (result) {
-//             // res.json({ id: result.insertId });
-//             res.json(result);  // ======== check if this is right
-//         });
-//     res.redirect("/");
-// });
+router.post("/api/burger", function (req, res) {
+    console.log("ADD REQ.BODY: ", req.body);
+    burger.create(req.body.burger_name, function (result) {
+        console.log(result);
+        res.redirect("/");
+    });
+});
 
 // update burger from to be devoured (false) to devoured (true)
-// router.get("/api/burger/:id", function (req, res) {
-// when 'devoured' button clicked, take value and update devoured from false to true
-// res.render("index");
-// });
+router.put("/api/burger/:id", function (req, res) {
+    const devouredBurger = req.params.id;
+    // when 'devoured' button clicked, take value and update devoured from false to true
+    res.redirect("/");
+});
 
 module.exports = router;

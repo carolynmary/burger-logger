@@ -8,15 +8,17 @@
         </div>
     </header>
 
-    {{!-- input field ============== do I need to change anything to FORM? // add btn action:url and method:POST ????? --}}
+    {{!-- input field --}}
     <div class="row m-4">
-        <div class="col-md-6 input-group mb-3" style="margin: auto;">
-            <input type="text" class="form-control beige devoured" placeholder="Enter a burger you would like to eat"
-                value="">
+        <form class="col-md-6 input-group mb-3" style="margin: auto;" action="/api/burger" method="POST">
+            <input type="text" class="form-control beige devoured" value="" name="burger_name"
+                placeholder="Enter a burger you would like to eat">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary brown-button" type="submit" id="add-btn">Submit</button>
+                <button class="btn btn-outline-secondary brown-button" type="submit" id="add-btn">
+                    Submit
+                </button>
             </div>
-        </div>
+        </form>
     </div>
 
     {{!-- MAIN --}}
