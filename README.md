@@ -7,7 +7,7 @@
  
 - - -
 - - -
-### This burger logger, “Eat-Da-Burger!,” is a restaurant app that lets users input the names of burgers they'd like to eat. And when the burger has been eaten, it can moved to the devoured list.
+### This burger logger, “Eat-Da-Burger!,” is a restaurant app that lets users input the names of burgers they'd like to eat. And when the burger has been eaten, it can be moved to the devoured list.
 - - -
 - - -
 
